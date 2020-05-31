@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mg_xs">3dp</dimen>
+    <dimen name="mg_sm">6dp</dimen>
+    <dimen name="mg_md">9dp</dimen>
+    <dimen name="mg_lg">12dp</dimen>
+    <dimen name="mg_xl">16dp</dimen>
+
+    <dimen name="font_xs">12sp</dimen>
+    <dimen name="font_sm">15sp</dimen>
+    <dimen name="font_md">18sp</dimen>
+    <dimen name="font_lg">21sp</dimen>
+</resources>

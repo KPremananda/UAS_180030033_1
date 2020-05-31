@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/img_song_tint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/song_image"
+        android:scaleType="fitStart"
+        android:tint="#AF000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tx_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mg_lg"
+        android:layout_marginTop="@dimen/mg_sm"
+        android:elevation="@dimen/mg_xs"
+        android:text="@string/song_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_lg"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tx_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mg_lg"
+        android:layout_marginTop="@dimen/mg_xs"
+        android:elevation="@dimen/mg_xs"
+        android:text="@string/song_artist"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_md"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx_title" />
+
+    <TextView
+        android:id="@+id/tx_album"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mg_xl"
+        android:layout_marginTop="@dimen/mg_md"
+        android:elevation="@dimen/mg_xs"
+        android:text="@string/song_album"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_sm"
+        android:textStyle="italic"
+        app:layout_constrainedWidth="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_song_mini"
+        app:layout_constraintTop_toBottomOf="@id/tx_artist" />
+
+    <TextView
+        android:id="@+id/tx_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mg_xl"
+        android:layout_marginTop="@dimen/mg_xs"
+        android:elevation="@dimen/mg_xs"
+        android:text="@string/song_date"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_sm"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_song_mini"
+        app:layout_constraintTop_toBottomOf="@id/tx_album" />
+
+    <ImageView
+        android:id="@+id/img_song_mini"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="@dimen/mg_xl"
+        android:layout_marginTop="81dp"
+        android:contentDescription="@string/song_image"
+        android:elevation="@dimen/mg_sm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/PseudoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="152dp"
+        android:background="@color/colorBackgroundDark"
+        android:elevation="@dimen/mg_xs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tx_pin_lyrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/pin_lyrics"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_pin_lyrics">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tx_lyrics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mg_xl"
+                    android:layout_marginRight="@dimen/mg_xl"
+                    android:layout_marginBottom="@dimen/mg_xl"
+                    android:text="@string/song_lyrics"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_sm" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

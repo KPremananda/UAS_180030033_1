@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDark"
+    tools:context=".InputActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lgd_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_xl"
+            android:text="@string/add"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_lg"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lgd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/song_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_state" />
+
+        <EditText
+            android:id="@+id/ipt_title"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/mg_md"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/mg_md"
+            android:background="@color/colorInput"
+            android:ems="10"
+            android:hint="@string/song_title"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingLeft="@dimen/mg_sm"
+            android:paddingRight="@dimen/mg_sm"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_title" />
+
+        <TextView
+            android:id="@+id/lgd_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/song_artist"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ipt_title" />
+
+        <EditText
+            android:id="@+id/ipt_artist"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:layout_marginEnd="@dimen/mg_md"
+            android:background="@color/colorInput"
+            android:ems="10"
+            android:hint="@string/song_artist"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/mg_sm"
+            android:paddingRight="@dimen/mg_sm"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_artist" />
+
+        <TextView
+            android:id="@+id/lgd_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/song_album"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ipt_artist" />
+
+        <EditText
+            android:id="@+id/ipt_album"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:layout_marginEnd="@dimen/mg_md"
+            android:background="@color/colorInput"
+            android:ems="10"
+            android:hint="@string/song_album"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingLeft="@dimen/mg_sm"
+            android:paddingRight="@dimen/mg_sm"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_album" />
+
+        <TextView
+            android:id="@+id/lgd_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/song_date"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ipt_album" />
+
+        <EditText
+            android:id="@+id/ipt_date"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:layout_marginEnd="@dimen/mg_md"
+            android:autofillHints=""
+            android:background="@color/colorInput"
+            android:ems="10"
+            android:hint="@string/song_date"
+            android:inputType="date"
+            android:paddingLeft="@dimen/mg_sm"
+            android:paddingRight="@dimen/mg_sm"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_date" />
+
+        <TextView
+            android:id="@+id/lgd_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/song_image"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ipt_date" />
+
+        <ImageView
+            android:id="@+id/ipt_image"
+            android:layout_width="192dp"
+            android:layout_height="192dp"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:contentDescription="@string/song_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_image"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/lgd_lyrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_lg"
+            android:text="@string/pin_lyrics"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_sm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ipt_image" />
+
+        <EditText
+            android:id="@+id/ipt_lyrics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_md"
+            android:layout_marginTop="@dimen/mg_sm"
+            android:layout_marginEnd="@dimen/mg_md"
+            android:layout_marginBottom="@dimen/mg_sm"
+            android:background="@color/colorInput"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/pin_lyrics"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:minHeight="32dp"
+            android:padding="@dimen/mg_sm"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/font_md"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lgd_lyrics" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
